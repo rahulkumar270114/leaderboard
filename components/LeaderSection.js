@@ -16,7 +16,6 @@ const [users, setUsers] = useState(leaders);
   const displayUsers = users
     .slice(pagesVisited, pagesVisited + usersPerPage)
     .map((user, idx) => {
-        console.log('image', user.image)
       return (
         <tr key={`${user._id}_${idx}`}>
             <td>{idx + pagesVisited + 1}</td>

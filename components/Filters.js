@@ -10,7 +10,11 @@ const slackChannelOptions = [
     `coffeeholics`, '#specialty-coffee-squad', '#salesforce-guild'
 ];
 const brevillevaluesOptions = [
-    'collaborative', 'creative', 'passionate', 'can-do-attitude', 'transparent', 'team-work', 'supportive', 'empowering', 'fun', 'trust'
+    'collaborative', 'creative', 'passionate', 'can-do-attitude ', 'transparent', 'team-work', 'supportive', 'empowering', 'fun', 'trust'
+];
+
+const sortByOptions = [
+    'Sort by Top Receivers', 'Sort by Top Gifters', 'Sort by Total (Received + Gifted)'
 ];
 
 const Filters = () => {
@@ -41,6 +45,10 @@ const handleChange = (e) => {
         <div className={styles['filter-col']}>
             <span>Breville Values:</span>
             <Dropdown options={sortArray(brevillevaluesOptions)} onChange={() => {}} value={brevillevaluesOptions[0]} placeholder="Select an option" />
+        </div>
+        <div className={styles['filter-col']}>
+            <span>Choose:</span>
+            <Dropdown options={sortArray(sortByOptions)} onChange={() => {}} value={sortByOptions[0]} placeholder="Select an option" />
         </div>
     </div>
   )
