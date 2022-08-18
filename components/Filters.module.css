@@ -12,7 +12,7 @@
     margin-bottom: 10px;
 }
 
-.filters div:nth-child(4){
+.filters > div:nth-child(4){
     position: relative;
     left: 20px;
 }
