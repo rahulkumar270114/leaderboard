@@ -10,7 +10,7 @@ import { getLeaders } from '../utils/functions';
 export default function Home(props) {
   const { users } = props,
     leadersList = getLeaders(users);
-  
+  console.log('totalusers', users);
   return (
     <div className={styles['container']}>
       <Head>

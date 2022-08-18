@@ -19,8 +19,10 @@ const [users, setUsers] = useState(leaders);
       return (
         <tr key={`${user._id}_${idx}`}>
             <td>{idx + pagesVisited + 1}</td>
-            <td><img src={user?.toUser?.image ? user?.toUser?.image : '/static/images/person.png'} width="30"/> <span>{user?.toUser?.name}</span></td>
-            <td>{user?.points}</td>
+            <td><img src={user?.image ? user?.image : '/static/images/person.png'} width="30"/> <span>{user?.name}</span></td>
+            <td>{user?.given === 0 ? '-' : user?.given}</td>
+            <td>{user?.received}</td>
+            <td>{+user?.given + +user?.received}</td>
         </tr>
       );
     });
@@ -40,6 +42,8 @@ const [users, setUsers] = useState(leaders);
                     <tr>
                     <th>S No.</th>
                     <th>Gratitude Champions</th>
+                    <th>Sent</th>
+                    <th>Received</th>
                     <th className={styles['dumpling-col']}><span>Total</span> <img src='/static/images/dumpling.png'/></th>
                     </tr>
                         {displayUsers}
