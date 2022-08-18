@@ -1,0 +1,12 @@
+.filters {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-col {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

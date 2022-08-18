@@ -3,49 +3,24 @@ import {useState} from 'react';
 import ReactPaginate from "react-paginate";
 
 const LeaderSection = ({leaders}) => {
-//   return (
-//     <div className={styles['leader-section']}>
-//         <table className={styles['leader-table']}>
-//             <tr>
-//             <th>S No.</th>
-//             <th>Name</th>
-//             <th><img src='/static/images/dumpling.png'/></th>
-//             </tr>
-//             {leaders.map((leader, idx) => {
-//             return (
-//                 <tr key={`${leader._id}_${idx}`}>
-//                 <td>{idx + 1}</td>
-//                 <td>{leader?.toUser?.name}</td>
-//                 <td>{leader?.points}</td>
-//                 </tr>
-//             )
-//             })}
-//         </table>
-//         {/* <ul>
-//             {
-//             leaders.map((leader, idx) => (
-//                 <li key={`${leader._id}_${idx}`}>
-//                 <span>{idx+1}</span> <span>{leader?.toUser?.name}</span> <span>{leader?.points}</span>
-//                 </li>
-//             ))
-//             }
-//         </ul> */}
-//     </div>
-//   )
 
-const [users, setUsers] = useState(leaders.slice(0, 50));
+// const [users, setUsers] = useState(leaders.slice(0, 50));
+const [users, setUsers] = useState(leaders);
   const [pageNumber, setPageNumber] = useState(0);
 
-  const usersPerPage = 5;
+  const usersPerPage = 10;
   const pagesVisited = pageNumber * usersPerPage;
+
+  console.log('users', users);
 
   const displayUsers = users
     .slice(pagesVisited, pagesVisited + usersPerPage)
     .map((user, idx) => {
+        console.log('image', user.image)
       return (
         <tr key={`${user._id}_${idx}`}>
             <td>{idx + pagesVisited + 1}</td>
-            <td>{user?.toUser?.name}</td>
+            <td><img src={user?.toUser?.image ? user?.toUser?.image : '/static/images/person.png'} width="30"/> <span>{user?.toUser?.name}</span></td>
             <td>{user?.points}</td>
         </tr>
       );
@@ -65,8 +40,8 @@ const [users, setUsers] = useState(leaders.slice(0, 50));
                 <table className={styles['leader-table']}>
                     <tr>
                     <th>S No.</th>
-                    <th>Name</th>
-                    <th><img src='/static/images/dumpling.png'/></th>
+                    <th>Gratitude Champions</th>
+                    <th className={styles['dumpling-col']}><span>Total</span> <img src='/static/images/dumpling.png'/></th>
                     </tr>
                         {displayUsers}
                 </table>
