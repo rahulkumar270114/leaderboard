@@ -15,6 +15,39 @@ a {
   box-sizing: border-box;
 }
 
+.paginationBttns {
+  /* width: 80%; */
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBttns a {
+  padding: 2px 8px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #312d2d;
+  color: #312d2d;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #312d2d;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #312d2d;
+}
+
+.paginationDisabled a, .paginationDisabled a:hover {
+  color: #800080;
+  background-color: lightgray;
+  cursor: unset;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -1,0 +1,42 @@
+.leader {
+    margin-bottom: 100px;
+}
+.leader p {
+    text-align: center;
+}
+.leader-section {
+    /* display: flex;
+    justify-content: center; */
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .leader-table {
+    border: 2px solid #312d2d;
+    width: 700px;
+    height: 200px;
+    border-radius: 5px;
+  }
+    
+  .leader-table th {
+    border-bottom: 1px solid #312d2d;
+    font-size: 20px;
+  }
+    
+  .leader-table td {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .leader-section ul {
+    background: #8080800d;
+    padding: 10px 60px;
+}
+
+.leader-section li {
+    display: flex;
+    gap: 40px;
+}
