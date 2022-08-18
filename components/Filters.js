@@ -7,7 +7,7 @@ const timeFrameOptions = [
     'This Week', 'This Month', 'All Time'
 ];
 const slackChannelOptions = [
-    'Coffeholics', 'Oracles'
+    `coffeeholics`, '#specialty-coffee-squad', '#salesforce-guild'
 ];
 const brevillevaluesOptions = [
     'collaborative', 'creative', 'passionate', 'can-do-attitude', 'transparent', 'team-work', 'supportive', 'empowering', 'fun', 'trust'
