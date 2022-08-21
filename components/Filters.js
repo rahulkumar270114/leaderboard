@@ -1,7 +1,8 @@
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-import styles from './Filters.module.css'
+import styles from './Filters.module.scss'
 import {useState} from 'react';
+import classNames from 'classnames';
 
 const timeFrameOptions = [
     'This Week', 'This Month', 'All Time'
@@ -17,11 +18,12 @@ const sortByOptions = [
     'Sort by Top Receivers', 'Sort by Top Gifters', 'Sort by Total (Received + Gifted)'
 ];
 
-const Filters = () => {
+const Filters = ({className = ''}) => {
 
-    const [time, setTime] = useState(timeFrameOptions[0]);
-    const [channel, setChannel] = useState(slackChannelOptions[0]);
-    const [value, setValue] = useState(brevillevaluesOptions[0]);
+    const [time, setTime] = useState(timeFrameOptions[0]),
+     [channel, setChannel] = useState(slackChannelOptions[0]),
+     [value, setValue] = useState(brevillevaluesOptions[0]),
+     classes = classNames( styles['filters-section'], className );
     
 //const defaultOption = options[0];
 
@@ -32,8 +34,9 @@ const sortArray = (arr) => {
 const handleChange = (e) => {
     console.log('value', e.value);
 }
+
   return (
-    <div className={styles['filters']}>
+    <div className={classes}>
         <div className={styles['filter-col']}>
             <span>Time Frames:</span>
             <Dropdown options={sortArray(timeFrameOptions)} onChange={handleChange} value={timeFrameOptions[0]} placeholder="Select an option" />

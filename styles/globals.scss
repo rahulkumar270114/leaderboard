@@ -21,20 +21,20 @@ a {
   list-style: none;
   display: flex;
   justify-content: center;
-}
 
-.paginationBttns a {
-  padding: 2px 8px;
-  margin: 8px;
-  border-radius: 5px;
-  border: 1px solid #312d2d;
-  color: #312d2d;
-  cursor: pointer;
-}
-
-.paginationBttns a:hover {
-  color: white;
-  background-color: #312d2d;
+  a {
+    padding: 2px 8px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #312d2d;
+    color: #312d2d;
+    cursor: pointer;
+  }
+  
+  a:hover {
+    color: white;
+    background-color: #312d2d;
+  }
 }
 
 .paginationActive a {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link'
-import styles from './SideNavbar.module.css';
+import styles from './SideNavbar.module.scss';
 
 const SideNavbar = () => {
   return (

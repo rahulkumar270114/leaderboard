@@ -1,4 +1,4 @@
-import styles from './LeaderSection.module.css';
+import styles from './LeaderSection.module.scss';
 import {useState} from 'react';
 import ReactPaginate from "react-paginate";
 
